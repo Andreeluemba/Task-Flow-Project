@@ -94,14 +94,24 @@
   - Adicionar tratamento de erros específicos de autenticação
   - _Requirements: 1.1, 1.2, 1.4, 2.1, 2.2, 2.4_
 
-- [ ] 9. Implementar componentes de tarefa
+- [x] 9. Implementar componentes de tarefa
+
+
+
+
+
   - Criar TaskCard para exibir informações da tarefa
   - Implementar TaskForm para criação e edição de tarefas
   - Criar TaskList para listar tarefas com filtros
   - Adicionar componente TaskFilter para filtrar por status
   - _Requirements: 3.3, 4.1, 4.2, 5.1, 5.2, 6.1, 6.2, 7.1, 8.1, 8.2_
 
-- [ ] 10. Desenvolver página principal (Dashboard)
+- [x] 10. Desenvolver página principal (Dashboard)
+
+
+
+
+
   - Criar DashboardPage com lista de tarefas do usuário
   - Implementar botão "Nova Tarefa" e modal de criação
   - Adicionar funcionalidade de edição inline ou modal

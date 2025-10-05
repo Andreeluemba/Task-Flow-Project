@@ -1,51 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LoginPage, RegisterPage, NotFoundPage } from './pages';
+import { LoginPage, RegisterPage, NotFoundPage, DashboardPage } from './pages';
 import { useAuthStore } from './store/authStore';
 import ToastContainer from './components/ui/ToastContainer';
 import { useNotificationStore } from './store/notificationStore';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
-
-// Temporary Dashboard component - will be implemented in later tasks
-const DashboardPage: React.FC = () => {
-  const { logout, user } = useAuthStore();
-  
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <h1 className="text-xl font-semibold text-gray-900">
-              Sistema de Tarefas
-            </h1>
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-700">
-                Olá, {user?.name}!
-              </span>
-              <button
-                onClick={logout}
-                className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
-              >
-                Sair
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-      
-      <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Dashboard (Em desenvolvimento)
-          </h2>
-          <p className="text-gray-600">
-            Esta página será implementada nas próximas tarefas.
-          </p>
-        </div>
-      </main>
-    </div>
-  );
-};
 
 // Protected Route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
